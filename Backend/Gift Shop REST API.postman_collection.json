@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "79df864b-3f9a-45a5-96e2-5c84d9271036",
+		"name": "Gift Shop REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all target audience",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/target-audience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"target-audience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get gifts by target audience",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/gifts-per-target-audience/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"gifts-per-target-audience",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add gift",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"targetAudienceId\": 1,\r\n    \"name\": \"Robot\",\r\n    \"description\": \"Amazing Robot\",\r\n    \"price\": 250,\r\n    \"discount\": 25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/gifts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"gifts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
